@@ -19,6 +19,7 @@ In application are included:
 * edit reservation
 * delete reservation
 * index taken vacancies
+* search for taken vacancies in specific day
 
 ## Run application
 
