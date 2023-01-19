@@ -1,0 +1,2 @@
+CREATE DATABASE IF NOT EXISTS `booking_api`;
+CREATE DATABASE IF NOT EXISTS `booking_api_testing`;

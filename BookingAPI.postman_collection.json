@@ -1,0 +1,506 @@
+{
+	"info": {
+		"_postman_id": "d9c8676c-8aa4-4092-b0a9-97ac138e9a9f",
+		"name": "Booking API",
+		"description": "Make your reservation today\n\nContact Support:\n Email: dominikkedzia@gmail.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api/v1",
+			"item": [
+				{
+					"name": "reservations",
+					"item": [
+						{
+							"name": "{reservation_id}",
+							"item": [
+								{
+									"name": "Get reservation",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/reservations/:reservation_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"reservations",
+												":reservation_id"
+											],
+											"variable": [
+												{
+													"key": "reservation_id",
+													"value": "1",
+													"description": "(Required) Reservation id"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "successful operation",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/reservations/:reservation_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"reservations",
+														":reservation_id"
+													],
+													"variable": [
+														{
+															"key": "reservation_id",
+															"value": "1",
+															"description": "(Required) Reservation id"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Update reservation",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/reservations/:reservation_id?first_name=Jan&last_name=Nowak",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"reservations",
+												":reservation_id"
+											],
+											"query": [
+												{
+													"key": "first_name",
+													"value": "Jan",
+													"description": "(Required) First name"
+												},
+												{
+													"key": "last_name",
+													"value": "Nowak",
+													"description": "(Required) Last name"
+												}
+											],
+											"variable": [
+												{
+													"key": "reservation_id",
+													"value": "1",
+													"description": "(Required) Reservation id"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "successful operation",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/reservations/:reservation_id?first_name=Jan&last_name=Nowak",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"reservations",
+														":reservation_id"
+													],
+													"query": [
+														{
+															"key": "first_name",
+															"value": "Jan"
+														},
+														{
+															"key": "last_name",
+															"value": "Nowak"
+														}
+													],
+													"variable": [
+														{
+															"key": "reservation_id",
+															"value": "1",
+															"description": "(Required) Reservation id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Delete reservation",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/reservations/:reservation_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"reservations",
+												":reservation_id"
+											],
+											"variable": [
+												{
+													"key": "reservation_id",
+													"value": "1",
+													"description": "(Required) Reservation id to delete"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Successfully deleted",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/reservations/:reservation_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"reservations",
+														":reservation_id"
+													],
+													"variable": [
+														{
+															"key": "reservation_id",
+															"value": "1",
+															"description": "(Required) Reservation id to delete"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Get all reservations",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/reservations",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"reservations"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "successful operation",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/reservations",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"reservations"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Add reservation",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/reservations?first_name=Jan&last_name=Nowak&date_from=2005-01-14&date_to=1963-06-29",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"reservations"
+									],
+									"query": [
+										{
+											"key": "first_name",
+											"value": "Jan",
+											"description": "(Required) First name"
+										},
+										{
+											"key": "last_name",
+											"value": "Nowak",
+											"description": "(Required) Last name"
+										},
+										{
+											"key": "date_from",
+											"value": "2005-01-14",
+											"description": "(Required) Begin date"
+										},
+										{
+											"key": "date_to",
+											"value": "1963-06-29",
+											"description": "(Required) End date"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Reservation was added",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/reservations?first_name=Jan&last_name=Nowak&date_from=2005-01-14&date_to=1963-06-29",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"reservations"
+											],
+											"query": [
+												{
+													"key": "first_name",
+													"value": "Jan"
+												},
+												{
+													"key": "last_name",
+													"value": "Nowak"
+												},
+												{
+													"key": "date_from",
+													"value": "2005-01-14"
+												},
+												{
+													"key": "date_to",
+													"value": "1963-06-29"
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "vacancies",
+					"item": [
+						{
+							"name": "Get all vacancies",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/vacancies",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"vacancies"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Retrived successfully",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/vacancies",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"vacancies"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Get one vacancy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/vacancies/:date",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"vacancies",
+										":date"
+									],
+									"variable": [
+										{
+											"key": "date",
+											"value": "20-01-2023",
+											"description": "(Required) Vacancy taken date"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Retrived successfully",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/vacancies/:date",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"vacancies",
+												":date"
+											],
+											"variable": [
+												{
+													"key": "date",
+													"value": "20-01-2023",
+													"description": "(Required) Vacancy taken date"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/",
+			"type": "string"
+		}
+	]
+}
