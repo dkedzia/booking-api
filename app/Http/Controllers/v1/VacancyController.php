@@ -29,7 +29,7 @@ class VacancyController extends Controller
 
     /**
      * @OA\Get(
-     *     path="/api/v1/vacancies/{date}",
+     *     path="/api/v1/vacancies/show/{date}",
      *     tags={"vacancy"},
      *     summary="Get one vacancy",
      *     operationId="vacancyShow",

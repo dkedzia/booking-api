@@ -201,7 +201,7 @@
                 }
             }
         },
-        "/api/v1/vacancies/{date}": {
+        "/api/v1/vacancies/show/{date}": {
             "get": {
                 "tags": [
                     "vacancy"
