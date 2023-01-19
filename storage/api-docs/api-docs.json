@@ -1,0 +1,232 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Booking API",
+        "description": "Make your reservation today",
+        "contact": {
+            "email": "dominikkedzia@gmail.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0",
+        "x-logo": {
+            "url": "https://via.placeholder.com/190x90.png?text=L5-Swagger"
+        }
+    },
+    "paths": {
+        "/api/v1/reservations": {
+            "get": {
+                "tags": [
+                    "reservation"
+                ],
+                "summary": "Get all reservations",
+                "operationId": "reservationsIndex",
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "reservation"
+                ],
+                "summary": "Add reservation",
+                "operationId": "reservationAdd",
+                "parameters": [
+                    {
+                        "name": "first_name",
+                        "in": "query",
+                        "description": "First name",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "string",
+                            "example": "Jan"
+                        }
+                    },
+                    {
+                        "name": "last_name",
+                        "in": "query",
+                        "description": "Last name",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "string",
+                            "example": "Nowak"
+                        }
+                    },
+                    {
+                        "name": "date_from",
+                        "in": "query",
+                        "description": "Begin date",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "date",
+                            "example": "23-01-2023"
+                        }
+                    },
+                    {
+                        "name": "date_to",
+                        "in": "query",
+                        "description": "End date",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "date",
+                            "example": "30-01-2023"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Reservation was added"
+                    }
+                }
+            }
+        },
+        "/api/v1/reservations/{reservation_id}": {
+            "get": {
+                "tags": [
+                    "reservation"
+                ],
+                "summary": "Get reservation",
+                "operationId": "reservationsShow",
+                "parameters": [
+                    {
+                        "name": "reservation_id",
+                        "in": "path",
+                        "description": "Reservation id",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "string",
+                            "example": "1"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "reservation"
+                ],
+                "summary": "Update reservation",
+                "operationId": "reservationsUpdate",
+                "parameters": [
+                    {
+                        "name": "reservation_id",
+                        "in": "path",
+                        "description": "Reservation id",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "string",
+                            "example": "1"
+                        }
+                    },
+                    {
+                        "name": "first_name",
+                        "in": "query",
+                        "description": "First name",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "string",
+                            "example": "Jan"
+                        }
+                    },
+                    {
+                        "name": "last_name",
+                        "in": "query",
+                        "description": "Last name",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "string",
+                            "example": "Nowak"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "reservation"
+                ],
+                "summary": "Delete reservation",
+                "operationId": "reservationsDelete",
+                "parameters": [
+                    {
+                        "name": "reservation_id",
+                        "in": "path",
+                        "description": "Reservation id to delete",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int",
+                            "example": 1
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully deleted"
+                    }
+                }
+            }
+        },
+        "/api/v1/vacancies": {
+            "get": {
+                "tags": [
+                    "vacancy"
+                ],
+                "summary": "Get all vacancies",
+                "operationId": "vacanciesIndex",
+                "responses": {
+                    "200": {
+                        "description": "Retrived successfully"
+                    }
+                }
+            }
+        },
+        "/api/v1/vacancies/{date}": {
+            "get": {
+                "tags": [
+                    "vacancy"
+                ],
+                "summary": "Get one vacancy",
+                "operationId": "vacancyShow",
+                "parameters": [
+                    {
+                        "name": "date",
+                        "in": "path",
+                        "description": "Vacancy taken date",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "string",
+                            "example": "20-01-2023"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Retrived successfully"
+                    }
+                }
+            }
+        }
+    }
+}
